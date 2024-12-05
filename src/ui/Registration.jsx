@@ -6,13 +6,19 @@ import { PhotoIcon } from '@heroicons/react/16/solid';
 const Registration = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const handleAvatar =()=>{
+
+  }
+
   const handleRegistration = (e) => {
     e.preventDefault();
   
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 py-10">
+    <div
+     className="min-h-screen bg-black text-white pb-32"
+     >
       {loggedIn ? (
         <Login />
       ) : (
@@ -82,16 +88,29 @@ const Registration = () => {
                 <Label
                   title='Cover Photo'/>
                   <div className='mt-2 flex items-center justify-center border border-dashed py-4 px-6 rounded-lg border-white/20'>
+                  <div className='text-center flex flex-col items-center'>
                   <div className='w-14 h-14 border border-gray-600 rounded-full p-1'>
                   <PhotoIcon className='mx-auto h-full w-full text-gray-500' aria-hidden='true'/>
                   </div>
-                  <div>
-                       <Label htmlFor='file-upload'>
+                  <div className='mt-4 flex items-center mb-1 text-sm leading-6 text-gray-400'>
+                  <label htmlFor='file-upload'
+                  className='relative cursor-pointer rounded-md px-2 py-1 bg-gray-800 font-semibold ring-1 focus-within:ring-2 hover:bg-gray-900'>
                          <span>Upload a file</span>
                          <input
                           type='file'
-                          name='file'/>
-                       </Label>
+                          name='file-upload'
+                          id='file-upload'
+                          className='sr-only'
+                          onChange={handleAvatar}/>
+                       </label>
+                       <p className='pl-1'>or drag and drop</p>
+                  </div>
+                  <p>
+                    PNG, JPG, GIF up to 10MB
+                  </p>
+                  </div>
+                  <div>
+                   
                   </div>
                   </div>
             
