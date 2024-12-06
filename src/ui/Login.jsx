@@ -4,7 +4,7 @@ import Label from './Label';
 const Login = ({ setLoggedIn }) => {
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic (optional)
+
   };
 
   return (
@@ -53,7 +53,6 @@ const Login = ({ setLoggedIn }) => {
         </div>
       </form>
 
-      {/* Toggle to Registration */}
       <p className="text-sm leading-6 text-gray-400 text-center py-6">
         Don't have an account yet?{' '}
         <button
