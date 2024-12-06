@@ -20,9 +20,10 @@ const Registration = () => {
      className="min-h-screen bg-black text-white pb-32"
      >
       {loggedIn ? (
-        <Login />
+        <Login setLoggedIn={setLoggedIn} />
       ) : (
-        <form
+     <div>
+         <form 
           className="max-w-4xl mx-auto bg-black p-6 rounded-lg shadow-lg"
           onSubmit={handleRegistration}
         >
@@ -31,7 +32,7 @@ const Registration = () => {
               Registration Form
             </h2>
             <p className="text-sm text-gray-400 mt-1">
-              Please provide the required information to register with us.
+              provide the required information to register
             </p>
           </div>
 
@@ -109,15 +110,13 @@ const Registration = () => {
                     PNG, JPG, GIF up to 10MB
                   </p>
                   </div>
-                  <div>
-                   
-                  </div>
                   </div>
             
               </div>
             </div>
 
           <div className="mt-6">
+            <p className='mt-5 mb-5 bg-white/90 text-red-600 text-center py-1 rounded-md tracking-wide font-semibold'>Error</p>
             <button
               type="submit"
               className="w-full sm:w-auto bg-indigo-500 text-white px-6 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-150"
@@ -125,7 +124,12 @@ const Registration = () => {
               Register
             </button>
           </div>
+      
         </form>
+        <p className='text-sm leading-6 text-gray-400 text-center py-6' >Have Already registered? {' '}  
+        <button onClick={()=>setLoggedIn(true)} className='text-gray-300 font-semibold underline underline-offset-2 decoration-[1px] hover:text-white duration-200'>Login</button></p>
+ 
+     </div>
       )}
     </div>
   );
