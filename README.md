@@ -75,12 +75,3 @@ Refer to the specific READMEs for deployment details.
 ## Contributing
 
 Contributions are welcome! Please see the specific frontend and backend READMEs for more details.
-
-## License
-
-[Specify your license here, e.g., MIT License]
-
-## Contact
-
-[Your Name/Link to Profile]
-[Your Email] 
