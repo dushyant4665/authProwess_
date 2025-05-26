@@ -1,0 +1,144 @@
+# AuthProwess - Modern Authentication System
+
+A full-stack authentication system built with React, Node.js, Express, and MongoDB.
+
+## Features
+
+- User registration and login
+- Password reset via email
+- JWT-based authentication
+- Protected routes
+- Modern, responsive UI with Tailwind CSS
+- Secure password storage with bcrypt
+- MongoDB for data persistence
+
+## Tech Stack
+
+### Frontend
+- React.js
+- React Router
+- Tailwind CSS
+- Axios
+- React Hot Toast
+
+### Backend
+- Node.js
+- Express
+- MongoDB
+- JWT
+- Bcrypt
+- Nodemailer
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB (local or Atlas)
+- Email service (for password reset)
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd auth-prowess
+```
+
+2. Install frontend dependencies:
+```bash
+npm install
+```
+
+3. Install backend dependencies:
+```bash
+cd backend
+npm install
+```
+
+4. Create a `.env` file in the backend directory:
+```env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/auth-prowess
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+FRONTEND_URL=http://localhost:5173
+
+# Email configuration (update with your email service)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=465
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-specific-password
+```
+
+## Running the Application
+
+1. Start MongoDB (if using local instance):
+```bash
+mongod
+```
+
+2. Start the backend server:
+```bash
+cd backend
+npm run dev
+```
+
+3. Start the frontend development server:
+```bash
+# In the root directory
+npm run dev
+```
+
+The application will be available at:
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000
+
+## Project Structure
+
+```
+auth-prowess/
+├── backend/
+│   ├── models/
+│   │   └── User.js
+│   ├── routes/
+│   │   └── auth.js
+│   ├── utils/
+│   │   └── email.js
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+├── src/
+│   ├── components/
+│   │   ├── SignIn.jsx
+│   │   ├── SignUp.jsx
+│   │   ├── ForgotPassword.jsx
+│   │   ├── ResetPassword.jsx
+│   │   ├── Welcome.jsx
+│   │   └── PrivateRoute.jsx
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── README.md
+```
+
+## Security Features
+
+- Password hashing with bcrypt
+- JWT-based authentication
+- Protected API endpoints
+- Secure password reset flow
+- Email verification for password reset
+- Environment variable configuration
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+MIT 

@@ -1,24 +1,84 @@
-# Logs
-logs
-*.log
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+/build
+/dist
+/out
+/.next
+
+# Testing
+/coverage
+.nyc_output
+
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*.log
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Frontend specific
+# React
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Backend specific
+# Node.js
+logs
+*.pid
+*.seed
+*.pid.lock
+
+# MongoDB
+data/db/
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+.tmp/
+
+# Optional: Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Optional: Upload directories
+/uploads/
+/public/uploads/
+
+# Optional: Cache directories
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Optional: Local SSL certificates
+*.pem
+*.key
+*.crt
+
+# Optional: System Files
+.DS_Store
+Thumbs.db
+desktop.ini 
+node_modules
